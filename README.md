@@ -1,7 +1,7 @@
 ## required installs
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+to create a react app open cmd and type `npm create-react-app`
 
 To run this  you also need to install react-otp-input by typing  `npm react-otp-input`
 
