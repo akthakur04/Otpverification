@@ -1,17 +1,54 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import OtpInput from "react-otp-input";
+import Header from "./MyComponents/Header";
+import "./styles.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class App extends Component {
+  state = {
+    otp: '',
+  };
+
+  handleChange = otp => {
+    this.setState({ otp });
+  };
+
+  render() {
+    return (
+
+      <div>
+        <Header />
+        <div >
+          </div>
+        <div className="d-flex justify-content-center align-items-center container">
+          <div className="card py-5 px-3">
+            
+         <div className="col text-center">
+        <h2>Verify OTP </h2>
+            <p>Enter the Otp sent to phone number : +91 - XXXX - XXX- XXX</p>
+          </div>   
+            <OtpInput
+              className="form-control "
+              onChange={this.handleChange}
+              numInputs={6}
+              separator={<span> </span>}
+              value={this.state.otp}
+            />
+            <br />
+
+            <button
+              className="btn btn-primary"
+              onClick={e =>
+                alert("Otp verified")
+              }
+            >
+              Verify Otp
+            </button>
+          </div></div></div>
+    );
+  }
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);

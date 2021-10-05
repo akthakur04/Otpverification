@@ -1,0 +1,52 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}.card {
+  width: 350px;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fff;
+  border: none;
+  height: 350px;
+  position: relative
+}
+
+.container {
+  padding: 10px;
+  padding-left: 50px;
+  margin-top: 50px;
+  padding-right: 50px;
+  
+  height: 100%;
+}
+
+body {
+background-image: url('./contact_bg_1.jpg');
+background-repeat:repeat;
+background-size: cover;  
+}
+
+.mobile-text {
+  color: #989696b8;
+  font-size: 15px
+}
+
+.form-control {
+  align-items: center;
+  margin-right: 12px
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ff8880;
+  outline: 0;
+  box-shadow: none
+}
+
+.btnself{
+  color: aquamarine;
+}
+.cursor {
+  cursor: pointer
+}
